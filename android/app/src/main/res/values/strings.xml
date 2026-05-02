@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">SaveAny</string>
+    <string name="share_to_saveany">Save with SaveAny</string>
+
+    <!-- Nav -->
+    <string name="nav_home">Home</string>
+    <string name="nav_tasks">Tasks</string>
+    <string name="nav_storages">Storages</string>
+    <string name="nav_settings">Settings</string>
+
+    <!-- Settings -->
+    <string name="settings_servers">Servers</string>
+    <string name="settings_add_server">Add server</string>
+    <string name="settings_server_name">Display name</string>
+    <string name="settings_server_url">Base URL (e.g. http://192.168.1.10:8080)</string>
+    <string name="settings_server_token">API token (Bearer)</string>
+    <string name="settings_test_connection">Test connection</string>
+    <string name="settings_save">Save</string>
+    <string name="settings_delete">Delete</string>
+    <string name="settings_active">Active</string>
+    <string name="settings_no_servers">No servers configured. Add one to get started.</string>
+    <string name="settings_dark_mode">Dark mode</string>
+    <string name="settings_dynamic_color">Material You dynamic color</string>
+    <string name="settings_about">About SaveAny</string>
+    <string name="settings_about_body">SaveAny mobile is a native Android client for the SaveAny-Bot HTTP API. Save Telegram media, run yt-dlp, queue Aria2 downloads, transfer between storages — all from your phone.</string>
+
+    <!-- Home -->
+    <string name="home_quick_save">Quick Save</string>
+    <string name="home_quick_save_hint">Paste a URL or magnet link…</string>
+    <string name="home_recent">Active &amp; recent tasks</string>
+    <string name="home_no_recent">No recent tasks. Pull to refresh.</string>
+    <string name="home_create">New task</string>
+    <string name="home_no_server">Connect a server in Settings to get started.</string>
+    <string name="home_open_settings">Open Settings</string>
+
+    <!-- Create task -->
+    <string name="create_title">New task</string>
+    <string name="create_type">Task type</string>
+    <string name="create_storage">Storage</string>
+    <string name="create_path">Sub-path (optional)</string>
+    <string name="create_urls">URLs (one per line)</string>
+    <string name="create_yt_flags">yt-dlp extra flags (one per line)</string>
+    <string name="create_message_links">Telegram message links (one per line)</string>
+    <string name="create_telegraph_url">Telegraph URL</string>
+    <string name="create_parsed_url">URL to parse</string>
+    <string name="create_source_storage">Source storage</string>
+    <string name="create_source_path">Source path</string>
+    <string name="create_target_storage">Target storage</string>
+    <string name="create_target_path">Target path</string>
+    <string name="create_submit">Create task</string>
+    <string name="create_aria2_options">Aria2 options (key=value, one per line)</string>
+
+    <!-- Task types -->
+    <string name="tt_directlinks">Direct links</string>
+    <string name="tt_directlinks_desc">Download from one or more direct file URLs</string>
+    <string name="tt_ytdlp">yt-dlp</string>
+    <string name="tt_ytdlp_desc">YouTube, Twitter, TikTok and 1000+ sites</string>
+    <string name="tt_aria2">Aria2</string>
+    <string name="tt_aria2_desc">HTTP(S), FTP, BitTorrent and magnets</string>
+    <string name="tt_parseditem">Parsed (plugins)</string>
+    <string name="tt_parseditem_desc">Parse a page via the bot\'s JS plugins</string>
+    <string name="tt_tgfiles">Telegram files</string>
+    <string name="tt_tgfiles_desc">Save media from Telegram message links</string>
+    <string name="tt_tphpics">Telegraph pictures</string>
+    <string name="tt_tphpics_desc">Grab all images from a Telegraph article</string>
+    <string name="tt_transfer">Transfer</string>
+    <string name="tt_transfer_desc">Move files between two storage backends</string>
+
+    <!-- Tasks -->
+    <string name="tasks_empty">No tasks yet. Create one from Home.</string>
+    <string name="tasks_cancel">Cancel</string>
+    <string name="tasks_open">Open</string>
+    <string name="tasks_status_queued">Queued</string>
+    <string name="tasks_status_running">Running</string>
+    <string name="tasks_status_completed">Completed</string>
+    <string name="tasks_status_failed">Failed</string>
+    <string name="tasks_status_cancelled">Cancelled</string>
+    <string name="tasks_speed">%1$.1f MB/s</string>
+    <string name="tasks_progress">%1$d%%</string>
+    <string name="tasks_refresh">Refresh</string>
+
+    <!-- Storages -->
+    <string name="storages_empty">No storages configured on the server.</string>
+    <string name="storage_type_local">Local disk</string>
+    <string name="storage_type_alist">Alist</string>
+    <string name="storage_type_webdav">WebDAV</string>
+    <string name="storage_type_s3">Amazon S3</string>
+    <string name="storage_type_minio">MinIO</string>
+    <string name="storage_type_telegram">Telegram</string>
+    <string name="storage_type_rclone">Rclone</string>
+
+    <!-- Misc -->
+    <string name="snack_task_created">Task created</string>
+    <string name="snack_task_cancelled">Task cancelled</string>
+    <string name="snack_error">Error: %1$s</string>
+    <string name="snack_connection_ok">Connected — server is healthy</string>
+    <string name="snack_connection_fail">Connection failed</string>
+    <string name="snack_no_active_server">No active server. Pick one in Settings.</string>
+    <string name="dialog_cancel">Cancel</string>
+    <string name="dialog_confirm">Confirm</string>
+
+    <!-- Share -->
+    <string name="share_title">Save shared link</string>
+    <string name="share_pick_type">Pick how to handle this link</string>
+    <string name="share_done">Saving — track it in the Tasks screen.</string>
+</resources>
