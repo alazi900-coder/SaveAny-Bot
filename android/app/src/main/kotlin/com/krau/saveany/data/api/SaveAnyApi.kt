@@ -16,7 +16,7 @@ interface SaveAnyApi {
     @GET("api/v1/task-types")
     suspend fun listTaskTypes(): TaskTypesResponse
 
-    @GET("api/v1/tasks")
+    @GET("api/v1/tasks/")
     suspend fun listTasks(): TasksList
 
     @GET("api/v1/tasks/{id}")
