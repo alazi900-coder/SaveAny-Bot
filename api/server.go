@@ -35,7 +35,7 @@ func NewServer(ctx context.Context) *Server {
 		// 根据方法和路径分发
 		switch r.Method {
 		case http.MethodGet:
-			if r.URL.Path == "/api/v1/tasks" {
+			if r.URL.Path == "/api/v1/tasks" || r.URL.Path == "/api/v1/tasks/" {
 				handlers.ListTasksHandler(w, r)
 			} else {
 				handlers.GetTaskHandler(w, r)
