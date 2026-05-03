@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">احفظ أي شيء</string>
+    <string name="share_to_saveany">احفظ عبر SaveAny</string>
+
+    <string name="nav_home">الرئيسية</string>
+    <string name="nav_tasks">المهام</string>
+    <string name="nav_storages">التخزينات</string>
+    <string name="nav_settings">الإعدادات</string>
+
+    <string name="settings_servers">الخوادم</string>
+    <string name="settings_add_server">إضافة خادم</string>
+    <string name="settings_server_name">اسم العرض</string>
+    <string name="settings_server_url">رابط الخادم (مثل http://192.168.1.10:8080)</string>
+    <string name="settings_server_token">رمز API (Bearer)</string>
+    <string name="settings_test_connection">اختبار الاتصال</string>
+    <string name="settings_save">حفظ</string>
+    <string name="settings_delete">حذف</string>
+    <string name="settings_active">نشِط</string>
+    <string name="settings_no_servers">لا توجد خوادم مهيأة. أضِف خادماً للبدء.</string>
+    <string name="settings_dark_mode">الوضع الداكن</string>
+    <string name="settings_dynamic_color">ألوان Material You الديناميكية</string>
+    <string name="settings_about">حول التطبيق</string>
+    <string name="settings_about_body">تطبيق Android أصلي لعميل SaveAny-Bot عبر الـ API. احفظ ملفات Telegram، شغّل yt-dlp، أضِف تنزيلات Aria2، وانقل الملفات بين التخزينات — كل ذلك من هاتفك.</string>
+
+    <string name="home_quick_save">حفظ سريع</string>
+    <string name="home_quick_save_hint">الصق رابطاً أو رابط مغناطيسي…</string>
+    <string name="home_recent">المهام النشطة والحديثة</string>
+    <string name="home_no_recent">لا توجد مهام حديثة. اسحب للتحديث.</string>
+    <string name="home_create">مهمة جديدة</string>
+    <string name="home_no_server">قم بربط خادم من الإعدادات للبدء.</string>
+    <string name="home_open_settings">فتح الإعدادات</string>
+
+    <string name="create_title">مهمة جديدة</string>
+    <string name="create_type">نوع المهمة</string>
+    <string name="create_storage">التخزين</string>
+    <string name="create_path">مسار فرعي (اختياري)</string>
+    <string name="create_urls">روابط (واحد في كل سطر)</string>
+    <string name="create_yt_flags">إعدادات yt-dlp إضافية (واحدة في كل سطر)</string>
+    <string name="create_message_links">روابط رسائل Telegram (واحد في كل سطر)</string>
+    <string name="create_telegraph_url">رابط Telegraph</string>
+    <string name="create_parsed_url">الرابط المراد تحليله</string>
+    <string name="create_source_storage">التخزين المصدر</string>
+    <string name="create_source_path">المسار المصدر</string>
+    <string name="create_target_storage">التخزين الهدف</string>
+    <string name="create_target_path">المسار الهدف</string>
+    <string name="create_submit">إنشاء المهمة</string>
+    <string name="create_aria2_options">خيارات Aria2 (key=value في كل سطر)</string>
+
+    <string name="tt_directlinks">روابط مباشرة</string>
+    <string name="tt_directlinks_desc">تحميل من رابط ملف مباشر أو أكثر</string>
+    <string name="tt_ytdlp">yt-dlp</string>
+    <string name="tt_ytdlp_desc">يوتيوب وتويتر وتيكتوك و1000+ موقع</string>
+    <string name="tt_aria2">Aria2</string>
+    <string name="tt_aria2_desc">HTTP(S) و FTP و BitTorrent والمغناطيس</string>
+    <string name="tt_parseditem">إضافات (Parsed)</string>
+    <string name="tt_parseditem_desc">حلِّل صفحة عبر إضافات JS الخاصة بالبوت</string>
+    <string name="tt_tgfiles">ملفات Telegram</string>
+    <string name="tt_tgfiles_desc">احفظ الوسائط من روابط رسائل Telegram</string>
+    <string name="tt_tphpics">صور Telegraph</string>
+    <string name="tt_tphpics_desc">جلب كل الصور من مقال Telegraph</string>
+    <string name="tt_transfer">نقل</string>
+    <string name="tt_transfer_desc">نقل الملفات بين تخزينين</string>
+
+    <string name="tasks_empty">لا توجد مهام بعد. أنشئ مهمة من الرئيسية.</string>
+    <string name="tasks_cancel">إلغاء</string>
+    <string name="tasks_open">فتح</string>
+    <string name="tasks_status_queued">في الانتظار</string>
+    <string name="tasks_status_running">قيد التنفيذ</string>
+    <string name="tasks_status_completed">اكتملت</string>
+    <string name="tasks_status_failed">فشلت</string>
+    <string name="tasks_status_cancelled">ملغاة</string>
+    <string name="tasks_speed">%1$.1f م.ب/ث</string>
+    <string name="tasks_progress">%1$d%%</string>
+    <string name="tasks_refresh">تحديث</string>
+
+    <string name="storages_empty">لا توجد تخزينات مهيأة على الخادم.</string>
+    <string name="storage_type_local">قرص محلي</string>
+    <string name="storage_type_alist">Alist</string>
+    <string name="storage_type_webdav">WebDAV</string>
+    <string name="storage_type_s3">Amazon S3</string>
+    <string name="storage_type_minio">MinIO</string>
+    <string name="storage_type_telegram">Telegram</string>
+    <string name="storage_type_rclone">Rclone</string>
+
+    <string name="snack_task_created">تم إنشاء المهمة</string>
+    <string name="snack_task_cancelled">تم إلغاء المهمة</string>
+    <string name="snack_error">خطأ: %1$s</string>
+    <string name="snack_connection_ok">الاتصال ناجح — الخادم يعمل</string>
+    <string name="snack_connection_fail">فشل الاتصال</string>
+    <string name="snack_no_active_server">لا يوجد خادم نشط. اختر واحداً من الإعدادات.</string>
+    <string name="dialog_cancel">إلغاء</string>
+    <string name="dialog_confirm">تأكيد</string>
+
+    <string name="share_title">حفظ الرابط المشارك</string>
+    <string name="share_pick_type">اختر طريقة معالجة الرابط</string>
+    <string name="share_done">جاري الحفظ — تابع التقدّم في شاشة المهام.</string>
+</resources>

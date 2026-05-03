@@ -2,7 +2,9 @@ config.toml
 logs/
 tmp/
 data/
+!android/**/data/
 downloads/
+!android/**/downloads/
 session.*
 cache.db
 .vscode/

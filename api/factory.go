@@ -78,8 +78,10 @@ func (f *TaskFactory) createDirectLinksTask(taskID string, createdAt time.Time, 
 	}
 
 	task := directlinks.NewTask(taskID, f.ctx, params.URLs, stor, req.Path, nil)
+	tracked := trackAPITask(taskID, tasktype.TaskTypeDirectlinks, req.Storage, req.Path, task)
 
-	if err := core.AddTask(f.ctx, task); err != nil {
+	if err := core.AddTask(f.ctx, tracked); err != nil {
+		DeleteTask(taskID)
 		return nil, fmt.Errorf("failed to add task: %w", err)
 	}
 
@@ -103,8 +105,10 @@ func (f *TaskFactory) createYTDLPTask(taskID string, createdAt time.Time, req *C
 	}
 
 	task := ytdlp.NewTask(taskID, f.ctx, params.URLs, params.Flags, stor, req.Path, nil)
+	tracked := trackAPITask(taskID, tasktype.TaskTypeYtdlp, req.Storage, req.Path, task)
 
-	if err := core.AddTask(f.ctx, task); err != nil {
+	if err := core.AddTask(f.ctx, tracked); err != nil {
+		DeleteTask(taskID)
 		return nil, fmt.Errorf("failed to add task: %w", err)
 	}
 
@@ -145,8 +149,10 @@ func (f *TaskFactory) createAria2Task(taskID string, createdAt time.Time, req *C
 	}
 
 	task := aria2dl.NewTask(taskID, f.ctx, gid, params.URLs, aria2Client, stor, req.Path, nil)
+	tracked := trackAPITask(taskID, tasktype.TaskTypeAria2, req.Storage, req.Path, task)
 
-	if err := core.AddTask(f.ctx, task); err != nil {
+	if err := core.AddTask(f.ctx, tracked); err != nil {
+		DeleteTask(taskID)
 		return nil, fmt.Errorf("failed to add task: %w", err)
 	}
 
@@ -189,8 +195,10 @@ func (f *TaskFactory) createParsedTask(taskID string, createdAt time.Time, req *
 	}
 
 	task := parsed.NewTask(taskID, f.ctx, stor, req.Path, item, nil)
+	tracked := trackAPITask(taskID, tasktype.TaskTypeParseditem, req.Storage, req.Path, task)
 
-	if err := core.AddTask(f.ctx, task); err != nil {
+	if err := core.AddTask(f.ctx, tracked); err != nil {
+		DeleteTask(taskID)
 		return nil, fmt.Errorf("failed to add task: %w", err)
 	}
 
@@ -229,7 +237,9 @@ func (f *TaskFactory) createTGFilesTask(taskID string, createdAt time.Time, req 
 		if err != nil {
 			return nil, fmt.Errorf("failed to create tfile task: %w", err)
 		}
-		if err := core.AddTask(f.ctx, tfileTask); err != nil {
+		tracked := trackAPITask(taskID, tasktype.TaskTypeTgfiles, req.Storage, req.Path, tfileTask)
+		if err := core.AddTask(f.ctx, tracked); err != nil {
+			DeleteTask(taskID)
 			return nil, fmt.Errorf("failed to add task: %w", err)
 		}
 	} else {
@@ -244,7 +254,9 @@ func (f *TaskFactory) createTGFilesTask(taskID string, createdAt time.Time, req 
 		}
 
 		task := batchtfile.NewBatchTGFileTask(taskID, f.ctx, elems, nil, true)
-		if err := core.AddTask(f.ctx, task); err != nil {
+		tracked := trackAPITask(taskID, tasktype.TaskTypeTgfiles, req.Storage, req.Path, task)
+		if err := core.AddTask(f.ctx, tracked); err != nil {
+			DeleteTask(taskID)
 			return nil, fmt.Errorf("failed to add task: %w", err)
 		}
 	}
@@ -280,8 +292,10 @@ func (f *TaskFactory) createTPHPicsTask(taskID string, createdAt time.Time, req 
 
 	client := telegraph.NewClient()
 	task := tphtask.NewTask(taskID, f.ctx, phPath, pics, stor, req.Path, client, nil)
+	tracked := trackAPITask(taskID, tasktype.TaskTypeTphpics, req.Storage, req.Path, task)
 
-	if err := core.AddTask(f.ctx, task); err != nil {
+	if err := core.AddTask(f.ctx, tracked); err != nil {
+		DeleteTask(taskID)
 		return nil, fmt.Errorf("failed to add task: %w", err)
 	}
 
@@ -341,8 +355,10 @@ func (f *TaskFactory) createTransferTask(taskID string, createdAt time.Time, req
 	}
 
 	task := transfer.NewTransferTask(taskID, f.ctx, elems, nil, true)
+	tracked := trackAPITask(taskID, tasktype.TaskTypeTransfer, params.TargetStorage, params.TargetPath, task)
 
-	if err := core.AddTask(f.ctx, task); err != nil {
+	if err := core.AddTask(f.ctx, tracked); err != nil {
+		DeleteTask(taskID)
 		return nil, fmt.Errorf("failed to add task: %w", err)
 	}
 
